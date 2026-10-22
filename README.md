@@ -23,5 +23,53 @@ The codebase is structured using strict separation of concerns to maintain scala
 
 1. Clone the repository and navigate to the project directory.
 2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Student Add-on: Demo, Architecture, and Notes
+
+### Demo idea
+This project is a good demo for a student portfolio because it combines Python, APIs, finance, and AI. A simple demo flow could be:
+
+1. Start the terminal app.
+2. Load market data for a few symbols.
+3. View the real-time dashboard.
+4. Ask the AI assistant for a simple market summary.
+5. Submit a simulated buy or sell decision.
+6. Check the portfolio ledger and transaction log.
+
+### Architecture summary
+```text
++------------------+      +--------------------+      +-------------------+
+| Market Data API  | ---> | data_pipeline.py   | ---> | main.py           |
++------------------+      +--------------------+      +-------------------+
+                                  |                            |
+                                  v                            v
+                        +--------------------+      +-------------------+
+                        | Technical Analysis|      | AI / LLM Layer    |
+                        +--------------------+      +-------------------+
+                                  |                            |
+                                  v                            v
+                        +--------------------+      +-------------------+
+                        | ledger.py          |      | ui.py             |
+                        +--------------------+      +-------------------+
+```
+
+### What this project teaches
+- Python project structure
+- API integration with live data sources
+- Technical indicators and trend detection
+- State handling with JSON storage
+- Portfolio simulation and risk checks
+- Basic AI prompt-to-action workflow
+
+### Student notes
+This is a very practical project and a nice example of how a student can connect a trading idea with actual coding work. It is not production-grade finance software, but it is a strong beginner-to-intermediate project that shows system design thinking, data handling, and automation.
+
+### Possible next improvements
+- Add a real database instead of JSON files
+- Add paper trading history charts
+- Add more technical indicators
+- Add testing for portfolio logic
+- Add better logging and deployment scripts
